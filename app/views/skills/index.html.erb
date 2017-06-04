@@ -1,15 +1,5 @@
   <div class="content-wrapper">
     <section class="content-header">
-      <h1>
-        <small>Skill</small>
-      </h1>
-      <!--
-      <ol class="breadcrumb">
-        <li><i class="fa fa-dashboard active"></i> Home</li>
-        <li>Team</li>
-        <li>Skills</li>
-      </ol>
-      -->
     </section>
     <section class="content">
       <div class="row">
@@ -47,8 +37,10 @@
                         <td><i class="<%= skill.icon %>"></i></td>
                         <td><%= skill.title %></td>
                         <td><%= skill.description %></td>
-                        <td><%= link_to 'Edit', edit_skill_path(skill) %></td>
-                        <td><%= link_to 'Destroy', skill, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        <td>
+                        <%= link_to "<i class='fa fa-edit'></i>".html_safe, edit_skill_path(skill), class: 'btn btn-warning btn-xs' %>
+                        <%= link_to "<i class='fa fa-trash'></i>".html_safe, skill, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %> 
+                        </td>
                       </tr>
                       <% end %>
 

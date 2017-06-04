@@ -21,7 +21,7 @@ namespace :db do
 			Skill.create!(
 				title: 'Marketing',
 				icon: 'fa  fa-lightbulb-o',
-				description: 'Email, Content, Social Media, Campain...'
+				description: 'Email, Content, Social Media, Campaign...'
 			)
 			Skill.create!(
 				title: 'Photoshop',

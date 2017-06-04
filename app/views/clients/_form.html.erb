@@ -1,0 +1,41 @@
+<%= form_for(client) do |f| %>
+  <% if client.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(client.errors.count, "error") %> prohibited this client from being saved:</h2>
+
+      <ul>
+      <% client.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.text_field :name, class: 'form-control', placeholder: 'Name...' %>
+  </div>
+
+    <div class="form-group">
+    <%= f.text_field :email, class: 'form-control', placeholder: 'Email...' %>
+  </div>
+
+    <div class="form-group">
+    <%= f.text_field :phone, class: 'form-control', placeholder: 'Phone number...' %>
+  </div>
+
+    <div class="form-group">
+    <%= f.text_field :fiscal_number, class: 'form-control', placeholder: 'Fiscal number...' %>
+  </div>
+
+    <div class="form-group">
+    <%= f.text_field :website, class: 'form-control', placeholder: 'Website...' %>
+  </div>
+
+    <div class="form-group">
+    <%= f.text_field :address, class: 'form-control', placeholder: 'Address...' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Save', class: 'btn btn-primary pull-right' %>
+  </div>
+<% end %>
