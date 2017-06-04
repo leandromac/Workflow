@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-	  	<title>Workflow UTU</title>
+	  	<title>Workflow</title>
 	    <meta charset="utf-8">
 		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 		  <title>UTU | Home</title>
@@ -13,7 +13,7 @@
 		  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
 		  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
 		    <%= csrf_meta_tags %>
-
+        <%= favicon_link_tag 'favicon.ico' %>
 		    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 		    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 	</head>
@@ -27,11 +27,11 @@
    <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini">
-        <%= image_tag("logo.svg", :alt => "rss feed", :width => '30px') %>
+        <%= image_tag("logo.png", :alt => "rss feed", :height => '30px') %>
       </span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg">
-        <%= image_tag("utu-dashboard-logo.svg", :alt => "rss feed", :width => '148x') %>
+        <%= image_tag("logo.png", :alt => "rss feed", :height => '50x') %>
       </span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
@@ -88,7 +88,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu">
         <li class="header">ADMIN PANEL</li>
-        <li class="active treeview">
+        <li class="<%= current_page?(home_index_path) ? 'active treeview' : '' %>">
           <a href="index.html"><i class="fa fa-dashboard"></i> <span>Home</span></a>
         </li>
         <li class="treeview">
@@ -110,31 +110,13 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-          <ul class="treeview-menu">
+          <ul class="treeview treeview-menu">
             <li><a href="pages/team/accounts.html"><i class="fa fa-circle-o"></i> Accounts</a></li>
             <li><a href="pages/team/creatives.html"><i class="fa fa-circle-o"></i> Creatives</a></li>
             <li><%= link_to '<i class="fa fa-circle-o"></i> Skills'.html_safe, skills_path, class: '' %></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-money"></i> <span>Finances</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Cash Flow</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Analytics</a></li>
-          </ul>
-        </li>
-        <li class="header"> TOOLS</li>
-        <li><a href="http://drive.utu.agency/" target="_blank"><i class="fa fa-circle-o text-green"></i> <span>Drive</span></a></li>
-        <li><a href="http://mail.utu.agency/" target="_blank"><i class="fa fa-circle-o text-red"></i> <span>Email</span></a></li>
-        <li><a href="http://calendar.utu.agency/" target="_blank"><i class="fa fa-circle-o"></i> <span>Calendar</span></a></li>
-        <li><a href="http://hangouts.google.com/" target="_blank"><i class="fa fa-circle-o text-yellow"></i> <span>Hangout</span></a></li>
-        <li><a href="http://trello.com/utuagency" target="_blank"><i class="fa fa-circle-o text-blue"></i> <span>Trello</span></a></li>
-        <li><a href="http://utu-pt.slack.com" target="_blank"><i class="fa fa-circle-o text-aqua"></i> <span>Slack</span></a></li>
+
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -145,7 +127,7 @@
     	    <!-- /.content -->
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <p>&copy; 2017 <a href="http://utu.agency" target="_blank">UTU Agency</a> - Empowering People. All rights reserved.</p>
+    <p>&copy; 2017 Workflow - Empowering People.</p>
   </footer>
 
   </div>
