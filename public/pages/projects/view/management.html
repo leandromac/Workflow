@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>UTU | Project ID</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../../../bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../../../dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="../../../dist/css/skins/_all-skins.min.css">
+
+  <style>
+    .color-palette {
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+    }
+
+    .color-palette-set {
+      margin-bottom: 15px;
+    }
+
+    .color-palette span {
+      display: none;
+      font-size: 12px;
+    }
+
+    .color-palette:hover span {
+      display: block;
+    }
+
+    .color-palette-box h4 {
+      position: absolute;
+      top: 100%;
+      left: 25px;
+      margin-top: -40px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 12px;
+      display: block;
+      z-index: 7;
+    }
+  </style>
+
+</head>
+<body class="hold-transition skin-black sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+
+    <!-- Logo -->
+   <a href="../../../index.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini">
+        <img style="width: 30px;" src="http://utu.agency/logo.svg">
+      </span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg">
+        <img style="width: 148px;" src="../../../dist/img/utu-dashboard-logo.svg">
+      </span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          
+          <!-- Notifications: style can be found in dropdown.less -->
+          
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="../../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="../../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                  <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Edit Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+               </li>
+                </p>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+        </ul>
+      </div>
+
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu">
+        <li class="header">ADMIN PANEL</li>
+        <li class="treeview">
+          <a href="../../../index.html"><i class="fa fa-dashboard"></i> <span>Home</span></a>
+        </li>
+        <li class="active treeview">
+          <a href="../../../pages/projects/index.html">
+            <i class="fa fa-clone"></i> <span>Projects</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../../../pages/projects/clients.html"><i class="fa fa-circle-o"></i> Clients</a></li>
+            <li  class="active"><a href="../../../pages/projects/management.html"><i class="fa fa-circle-o"></i> Management</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-group"></i> <span>Team</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../../../pages/team/accounts.html"><i class="fa fa-circle-o"></i> Accounts</a></li>
+            <li><a href="../../../pages/team/creatives.html"><i class="fa fa-circle-o"></i> Creatives</a></li>
+            <li><a href="../../../pages/team/skills.html"><i class="fa fa-circle-o"></i> Skills</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-money"></i> <span>Finances</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Cash Flow</a></li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Analytics</a></li>
+          </ul>
+        </li>
+        <li class="header"> TOOLS</li>
+        <li><a href="http://drive.utu.agency/" target="_blank"><i class="fa fa-circle-o text-green"></i> <span>Drive</span></a></li>
+        <li><a href="http://mail.utu.agency/" target="_blank"><i class="fa fa-circle-o text-red"></i> <span>Email</span></a></li>
+        <li><a href="http://calendar.utu.agency/" target="_blank"><i class="fa fa-circle-o"></i> <span>Calendar</span></a></li>
+        <li><a href="http://hangouts.google.com/" target="_blank"><i class="fa fa-circle-o text-yellow"></i> <span>Hangout</span></a></li>
+        <li><a href="http://trello.com/utuagency" target="_blank"><i class="fa fa-circle-o text-blue"></i> <span>Trello</span></a></li>
+        <li><a href="http://utu-pt.slack.com" target="_blank"><i class="fa fa-circle-o text-aqua"></i> <span>Slack</span></a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        <small>Project #0001</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><i class="fa fa-dashboard active"></i> Home</li>
+        <li>Projects</li>
+        <li class="active">#0001</li>
+      </ol>
+    </section>
+    
+    <!--
+    <div class="pad margin no-print">
+      <div class="callout callout-info" style="margin-bottom: 0!important;">
+        <h4><i class="fa fa-info"></i> Information:</h4>
+        This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+      </div>
+    </div>
+    -->
+    <!-- Main content -->
+    <section class="invoice">
+      <!-- title row -->
+      <div class="row">
+        <div class="col-xs-12">
+          <h2 class="page-header">
+            <img src="http://utu.agency/logo.svg" width="50"> UTU "account_country"
+            <small class="pull-right">Date: 2/10/2014</small>
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- info row -->
+      <div class="row invoice-info">
+        <div class="col-sm-4 invoice-col">
+          Account
+          <address>
+            <strong>Admin, Inc.</strong><br>
+            795 Folsom Ave, Suite 600<br>
+            San Francisco, CA 94107<br>
+            Phone: (804) 123-5432<br>
+            Email: info@almasaeedstudio.com
+          </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+          Client
+          <address>
+            <strong>John Doe</strong><br>
+            795 Folsom Ave, Suite 600<br>
+            San Francisco, CA 94107<br>
+            Phone: (555) 539-1037<br>
+            Email: john.doe@example.com
+          </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+          <br>
+          <b>Order ID:</b> #0001<br>
+          <b>Payment Due:</b> 2/22/2014<br>
+          <b>Account:</b> 968-34567
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- Table row -->
+      <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Order</th>
+              <th>Service</th>
+              <th>Status</th>
+              <th>Description</th>
+              <th>Subtotal</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>Call of Duty</td>
+              <td><span class="label label-info">Processing</span></td>
+              <td>El snort testosterone trophy driving gloves handsome</td>
+              <td>$64.50</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Need for Speed IV</td>
+              <td><span class="label label-success">Completed</span></td>
+              <td>Wes Anderson umami biodiesel</td>
+              <td>$50.00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Monsters DVD</td>
+              <td><span class="label label-warning">Pending</span></td>
+              <td>Terry Richardson helvetica tousled street art master</td>
+              <td>$10.70</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Grown Ups Blue Ray</td>
+              <td><span class="label label-success">Completed</span></td>
+              <td>Tousled lomo letterpress</td>
+              <td>$25.99</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <!-- accepted payments column -->
+        <div class="col-xs-6">
+          <p class="lead">Payment Methods:</p>
+          <img src="../../../dist/img/credit/visa.png" alt="Visa">
+          <img src="../../../dist/img/credit/mastercard.png" alt="Mastercard">
+          <img src="../../../dist/img/credit/american-express.png" alt="American Express">
+          <img src="../../../dist/img/credit/paypal2.png" alt="Paypal">
+
+          <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+           <strong>Observations:</strong><br>
+            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg
+            dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+          </p>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-6">
+          <p class="lead">Amount Due 2/22/2014</p>
+
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th style="width:50%">Subtotal:</th>
+                <td>$250.30</td>
+              </tr>
+              <tr>
+                <th>Tax (9.3%)</th>
+                <td>$10.34</td>
+              </tr>
+              <tr>
+                <th>Shipping:</th>
+                <td>$5.80</td>
+              </tr>
+              <tr>
+                <th>Total:</th>
+                <td>$265.24</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- this row will not appear when printing -->
+      <div class="row no-print">
+        <div class="col-xs-12">
+          <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+          <button type="button" class="btn btn-warning pull-right"><i class="fa fa-pencil"></i> Edit Project
+          </button>
+          <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+            <i class="fa fa-download"></i> Generate PDF
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <div class="clearfix"></div>
+
+  </div>
+  <footer class="main-footer">
+    <p>&copy; 2017 <a href="http://utu.agency" target="_blank">UTU Agency</a> - Empowering People. All rights reserved.</p>
+  </footer>
+
+  </div>
+   <div class="control-sidebar-bg"></div>
+  </div>
+
+<!-- jQuery 2.2.3 -->
+<script src="../../../plugins/jQuery/jquery-2.2.3.min.js"></script>
+<!-- Bootstrap 3.3.6 -->
+<script src="../../../bootstrap/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="../../../plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="../../../dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../../../dist/js/demo.js"></script>
+</body>
+</html>

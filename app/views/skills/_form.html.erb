@@ -1,0 +1,29 @@
+<%= form_for(skill) do |f| %>
+  <% if skill.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(skill.errors.count, "error") %> prohibited this skill from being saved:</h2>
+
+      <ul>
+      <% skill.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.text_field :title, class: 'form-control', placeholder: 'Skill title...' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_field :icon, class: 'form-control', placeholder: 'Skill title...' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.text_area :description, class: 'form-control', placeholder: 'Description...' %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Save changes', class: 'btn btn-primary pull-right' %>
+  </div>
+<% end %>
