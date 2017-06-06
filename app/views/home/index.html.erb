@@ -15,7 +15,6 @@
       <!-- Info boxes -->
       <div class="row">
 
-
         <div class="col-lg-3 col-xs-6">
           <!-- small box -->
           <div class="small-box bg-aqua">
@@ -101,16 +100,13 @@
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
-            <!-- /.box-header -->
             <div class="box-body no-padding">
               <div class="row">
                 <div class="col-md-9 col-sm-8">
                   <div class="pad">
-                    <!-- Map will be created here -->
                     <div id="world-map-markers" style="height: 250px;"></div>
                   </div>
                 </div>
-                <!-- /.col -->
                 <div class="col-md-3 col-sm-4">
                   <div class="pad box-pane-right bg-green" style="min-height: 280px">
                     <div class="description-block margin-bottom">
@@ -118,27 +114,18 @@
                       <h5 class="description-header">48</h5>
                       <span class="description-text">Creatives</span>
                     </div>
-                    <!-- /.description-block -->
                     <div class="description-block margin-bottom">
                       <div class="sparkbar pad" data-color="#fff">90,50,90,70,61,83,63</div>
                       <h5 class="description-header">391</h5>
                       <span class="description-text">Accounts</span>
                     </div>
-                    <!-- /.description-block -->
-                    
-                    <!-- /.description-block -->
                   </div>
                 </div>
-                <!-- /.col -->
               </div>
-              <!-- /.row -->
             </div>
-            <!-- /.box-body -->
           </div>
-          <!-- /.box -->
           </div>
           <div class="col-md-4">
-              <!-- USERS LIST -->
               <div class="box box-danger">
                 <div class="box-header with-border">
                   <h3 class="box-title">Last Members</h3>
@@ -150,7 +137,6 @@
                     </button>
                   </div>
                 </div>
-                <!-- /.box-header -->
                 <div class="box-body no-padding">
                   <ul class="users-list clearfix">
                     <li>
@@ -194,19 +180,12 @@
                       <span class="users-list-date">15 Jan</span>
                     </li>
                   </ul>
-                  <!-- /.users-list -->
                 </div>
-                <!-- /.box-body -->
                 <div class="box-footer text-center">
                   <a href="pages/team/creatives.html" class="uppercase">View All Members</a>
                 </div>
-                <!-- /.box-footer -->
               </div>
-              <!--/.box -->
             </div>
-          <!-- /.row -->
-
-          <!-- TABLE: LATEST ORDERS -->
           <div class="col-md-7"> 
             <div class="">
               <div class="box box-info">
@@ -219,7 +198,6 @@
                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
                   </div>
                 </div>
-                <!-- /.box-header -->
                 <div class="box-body">
                   <div class="table-responsive">
                     <table class="table no-margin">
@@ -291,14 +269,11 @@
                       </tbody>
                     </table>
                   </div>
-                  <!-- /.table-responsive -->
                 </div>
-                <!-- /.box-body -->
                 <div class="box-footer clearfix">
                   <a href="pages/projects/new/management.html" class="btn btn-sm btn-info btn-flat pull-left">New Project</a>
                   <a href="pages/projects/managements.html" class="btn btn-sm btn-default btn-flat pull-right">View All Projects</a>
                 </div>
-                <!-- /.box-footer -->
               </div>
             </div>
           </div>
@@ -313,49 +288,24 @@
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
-            <!-- /.box-header -->
             <div class="box-body">
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-12">
                   <div class="chart-responsive">
                     <canvas id="pieChart" height="150"></canvas>
                   </div>
-                  <!-- ./chart-responsive -->
                 </div>
-                <!-- /.col -->
-                <div class="col-md-4">
-                  <ul class="chart-legend clearfix">
-                    <li><i class="fa fa-circle-o text-red"></i> Graphic Design</li>
-                    <li><i class="fa fa-circle-o text-green"></i> Web Developer</li>
-                    <li><i class="fa fa-circle-o text-yellow"></i> Programmer</li>
-                    <li><i class="fa fa-circle-o text-aqua"></i> Marketing</li>
-                    <li><i class="fa fa-circle-o text-light-blue"></i> Photograph</li>
-                    <li><i class="fa fa-circle-o text-gray"></i> Game / 3D</li>
-                  </ul>
-                </div>
-                <!-- /.col -->
               </div>
-              <!-- /.row -->
             </div>
-            <!-- /.box-body -->
             <div class="box-footer no-padding">
               <ul class="nav nav-pills nav-stacked">
-                <li><a href="#">Graphic Design
-                  <span class="pull-right text-red"> 1320</span></a></li>
-                <li><a href="#">Web Developer <span class="pull-right text-green"> 980</span></a>
-                </li>
-                <li><a href="#">Programer<span class="pull-right text-yellow"> 610</span></a></li>
-                <li><a href="#">Marketing<span class="pull-right text-aqua"> 439</span></a></li>
+                <% @skills.each do |skill| %>
+                <li><i  style="padding: 10px" class="<%= skill.icon %>"></i> <%= skill.title %><span class="pull-right text-red"> 1320 </span></a></li>
+                <% end %>
               </ul>
             </div>
-            <!-- /.footer -->
           </div>
-          <!-- /.box -->
         </div>
-          </div>
-          <!-- /.box -->
-        <!-- /.col -->
-        <!-- /.col -->
+        </div>
       </div>
-      <!-- /.row -->
     </section>

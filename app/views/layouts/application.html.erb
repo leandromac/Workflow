@@ -89,7 +89,7 @@
       <ul class="sidebar-menu">
         <li class="header">ADMIN PANEL</li>
         <li class="<%= current_page?(home_index_path) ? 'active treeview' : '' %>">
-          <a href="index.html"><i class="fa fa-dashboard"></i> <span>Home</span></a>
+          <%= link_to '<i class="fa fa-dashboard-o"></i> Home'.html_safe, home_index_path, class: '' %>
         </li>
         <li class="treeview">
           <a href="pages/projects/index.html">
@@ -201,6 +201,8 @@
     });
   });
 </script>
+
+
 <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
 <script src="plugins/fastclick/fastclick.js"></script>
